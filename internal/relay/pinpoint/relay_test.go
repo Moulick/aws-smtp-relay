@@ -2,7 +2,7 @@ package relay
 
 import (
 	"errors"
-	"io/ioutil"
+	"io"
 	"net"
 	"os"
 	"regexp"
@@ -10,6 +10,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/pinpointemail"
 	"github.com/aws/aws-sdk-go/service/pinpointemail/pinpointemailiface"
+
 	"github.com/blueimp/aws-smtp-relay/internal/relay"
 )
 
@@ -69,8 +70,8 @@ func sendHelper(
 		outWriter.Close()
 		errWriter.Close()
 	}()
-	stdout, _ := ioutil.ReadAll(outReader)
-	stderr, _ := ioutil.ReadAll(errReader)
+	stdout, _ := io.ReadAll(outReader)
+	stderr, _ := io.ReadAll(errReader)
 	return testData.input, stdout, stderr, sendErr
 }
 

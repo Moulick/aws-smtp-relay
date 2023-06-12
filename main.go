@@ -31,10 +31,12 @@ var (
 	denyTo    = flag.String("d", "", "Denied recipient emails regular expression")
 )
 
-var ipMap map[string]bool
-var bcryptHash []byte
-var password []byte
-var relayClient relay.Client
+var (
+	ipMap       map[string]bool
+	bcryptHash  []byte
+	password    []byte
+	relayClient relay.Client
+)
 
 func server() (srv *smtpd.Server, err error) {
 	authMechs := make(map[string]bool)
