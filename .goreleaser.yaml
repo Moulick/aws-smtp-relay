@@ -114,10 +114,10 @@ snapshot:
   name_template: "{{ incpatch .Tag}}-devel"
 
 gomod:
-  proxy: true
-  env:
-    - GOPROXY=https://proxy.golang.org,direct
-    - GOSUMDB=sum.golang.org
+#  proxy: true
+#  env:
+#    - GOPROXY=https://proxy.golang.org,direct
+#    - GOSUMDB=sum.golang.org
   mod: mod
   gobinary: go
 
