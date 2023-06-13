@@ -60,10 +60,10 @@ This repository provides a sample [Dockerfile](Dockerfile) to build and run the
 project in a container environment.
 
 A prebuilt Docker image is also available on
-[Docker Hub](https://hub.docker.com/r/blueimp/aws-smtp-relay/):
+[Github packages](https://github.com/Moulick/aws-smtp-relay/pkgs/container/aws-smtp-relay):
 
 ```sh
-docker run blueimp/aws-smtp-relay --help
+docker run ghcr.io/moulick/aws-smtp-relay:v1.1.1 --help
 ```
 
 ## Installation
@@ -72,7 +72,7 @@ The `aws-smtp-relay` binary can be installed from source via
 [go get](https://golang.org/cmd/go/):
 
 ```sh
-go get github.com/blueimp/aws-smtp-relay
+go get github.com/Moulick/aws-smtp-relay
 ```
 
 ## Usage
@@ -304,7 +304,7 @@ to a `string` value:
 First, clone the project and then switch into its source directory:
 
 ```sh
-git clone https://github.com/blueimp/aws-smtp-relay.git
+git clone https://github.com/Moulick/aws-smtp-relay.git
 cd aws-smtp-relay
 ```
 
